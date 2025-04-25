@@ -2,47 +2,167 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #fbcfe8, #d1d5db);
+  }
+  
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 2rem;
+    color: #6b21a8;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .file-input,
+  .input-text,
+  .select-skin-type {
+    padding: 0.75rem;
+    border: 1px solid #6b21a8;
+    border-radius: 0.5rem;
+  }
+  
+  .file-input {
+    background: #f3f4f6;
+  }
+  
+  .input-text {
+    font-size: 1rem;
+  }
+  
+  .select-skin-type {
+    font-size: 1rem;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    background-color: #d1d5db;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button.active {
+    background-color: #6b21a8;
+    color: white;
+  }
+  
+  .button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .submit-button {
+    background-color: #10b981;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #059669;
+  }
+  
+  .result-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #6b21a8;
+    margin-bottom: 1rem;
+  }
+  
+  .risk-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .risk-tag.safe {
+    background-color: #d1fae5;
+    color: #10b981;
+  }
+  
+  .risk-tag.caution {
+    background-color: #fef08a;
+    color: #d97706;
+  }
+  
+  .risk-tag.harmful {
+    background-color: #fee2e2;
+    color: #ef4444;
+  }
+  
+  .skin-type-display {
+    font-size: 1rem;
+    color: #4b5563;
+  }
+  
+  .skin-type-label {
+    font-weight: bold;
+  }
+  
+  .skin-type-value {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .markdown-container {
+    font-size: 1rem;
+    color: #374151;
+  }
+  
+  .markdown-container p {
+    line-height: 1.6;
+  }
+  
 
-.app {
-  text-align: center;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-}
 
-input {
-  width: 100%;
-  padding: 8px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.result {
-  margin-top: 10px;
-  font-weight: bold;
-}
