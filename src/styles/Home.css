@@ -8,31 +8,10 @@
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, #f3e7f7 0%, #fff 100%);
-  padding: 2rem 5%;
+  padding: 4rem 5%;
   min-height: 80vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.logo-container {
-  display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.logo-container h1 {
-  font-size: 2.5rem;
-  color: #9c27b0;
-  margin: 0;
 }
 
 .hero-content {
@@ -40,6 +19,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-text {
@@ -284,10 +265,6 @@
 @media (max-width: 768px) {
   .hero {
     padding: 2rem;
-  }
-
-  .logo-container h1 {
-    font-size: 2rem;
   }
 
   .hero-text h2 {

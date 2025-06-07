@@ -5,16 +5,8 @@ import '../styles/Home.css';
 const Home = () => {
   return (
     <div className="home">
-      {/* Hero Section with Logo and Single Image */}
+      {/* Hero Section */}
       <header className="hero">
-        <div className="logo-container">
-          <img 
-            src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=150" 
-            alt="Beauty Advisor Logo" 
-            className="logo"
-          />
-          <h1>Beauty Advisor</h1>
-        </div>
         <div className="hero-content">
           <div className="hero-text">
             <h2>Your Personal Skincare Expert</h2>
